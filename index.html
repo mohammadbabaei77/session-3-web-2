@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body>
+    <!-- start making website -->
+    <main class="main">
+      <!-- start header -->
+      <header class="header">
+        <nav>
+          <a href="#">home</a>
+          <a href="#">about</a>
+          <a href="#">contact</a>
+          <a href="#">gallery</a>
+        </nav>
+      </header>
+      <div class="bars">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+      <!-- end header -->
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./images/image-1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-3.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-1.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-2.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="./images/image-3.jpg" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+    <!-- end making website -->
+     <script src="./swiper/swiper-bundle.min.js"></script>
+     <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      let bars = document.querySelector(".bars");
+      let header_menu = document.querySelector(".header");
+      bars.addEventListener("click", function () {
+        header_menu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
