@@ -3,8 +3,8 @@
     padding: 10px 20px;
     height: 100vh;
     background-color: #2b2b2b;
-    position: absolute;
-    top: -100%;
+    position: fixed;
+    left: -100%;
     transition: 300ms;
     z-index: 9999;
     nav{
@@ -57,5 +57,7 @@
     }
 }
 .active{
+    left: 0;
+    position: fixed;
     top: 0;
 }
